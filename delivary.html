@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Tracking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .tracking-container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        button {
+            background: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .status {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tracking-container">
+        <h2>Track Your Order</h2>
+        <input type="text" id="trackingNumber" placeholder="Enter Tracking Number">
+        <button onclick="trackOrder()">Track</button>
+        <p class="status" id="statusMessage"></p>
+    </div>
+
+    <script>
+        function trackOrder() {
+            let trackingNumber = document.getElementById("trackingNumber").value;
+            let statusMessage = document.getElementById("statusMessage");
+
+            if (trackingNumber === "") {
+                statusMessage.innerHTML = "Please enter a tracking number.";
+                return;
+            }
+
+            let length = trackingNumber.length;
+            let status;
+
+            if (length === 5) {
+                status = "Order Shipped 🚛";
+            } else if (length === 6) {
+                status = "Processing at Warehouse 🏭";
+            } else if (length === 7) {
+                status = "Delivered ✅";
+            } else {
+                status = "Invalid tracking number. Please enter 5, 6, or 7 digits.";
+            }
+
+            statusMessage.innerHTML = `Tracking #${trackingNumber}: ${status}`;
+        }
+    </script>
+
+</body>
+</html>

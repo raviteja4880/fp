@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/png" href="C:\Users\ravit\Downloads/logo.png">
+    <link rel="stylesheet" href="signin_styles.css">
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="Ravi">
+        <h2>Create Account<h2>
+        <p>Please fill in the details</p>
+        <hr>
+        <br>
+        <form id="signupForm">
+            <label><b>Full Name:</b>
+                <input type="text" placeholder="Enter Name" name="name" id="name" required>
+            </label>
+            <br>
+            <label><b>Password:</b>
+                <input type="password" placeholder="Enter password" name="password" id="pswd" required>
+            </label>
+            <br>
+            <label><b>Email:</b>
+                <input type="email" placeholder="Enter email" name="email" id="email" required>
+            </label>
+            <p>By creating an account you agree to our 
+                <a href="https://www.termsfeed.com/live/c0f11f2f-7f7f-4336-9e7a-9ae7fc029e68" style="color:dodgerblue">
+                    Terms & Privacy.
+                </a> 
+            </p>
+            <button type="button" class="cancelbtn">Cancel</button>
+            <button type="submit" class="signupbtn">Create</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", async function(event) {
+            event.preventDefault(); 
+
+            const fullName = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("pswd").value;
+            
+            const formData = {
+                Name: fullName,
+                Email:email,
+                pass: password,
+               
+            };
+
+            try {
+                const response = await fetch("http://localhost:9000/get1/", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+
+                
+            } catch (error) {
+                console.error("Error:", error);
+               
+            }
+        });
+
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+        event.preventDefault(); 
+        alert('created sucessful✅')
+        this.reset();
+        });
+    </script>
+</body>
+</html>

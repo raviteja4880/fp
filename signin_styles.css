@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+}
+
+div {
+    background-color: rgba(224, 224, 15, 0.381);
+    width: 35%;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    border-radius: 25px;
+}
+
+p{
+    font-size: 15px;
+}
+
+h2 {
+    color: darkblue;
+    font-size: 35px;
+}
+
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 15px;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+    background-color: white;
+    border-color: darkblue;
+}
+
+button {
+    background-color: green;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: opacity 0.3s;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+.cancelbtn, .signupbtn {
+    padding: 14px 20px;
+    width: 50%;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cancelbtn {
+    background-color: red;
+    width:50%;
+}
+
+.signupbtn {
+    background-color: green;
+    float:left;
+    width:50%;
+}
+
+.Ravi {
+    padding: 15px;
+    position: absolute;
+    top: 15%;
+    left: 32%;
+}
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.div.Ravi {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 90%; 
+    max-width: 400px;
+}
+
+.div.Ravi h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.div.Ravi hr {
+    border: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+.div.Ravi form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.div.Ravi form input[type="text"],
+.div.Ravi form input[type="password"],
+.div.Ravi form input[type="email"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+.div.Ravi form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 48%; 
+}
+
+.div.Ravi form button.cancelbtn {
+    background-color: #f44336;
+    margin-right: 4%; 
+}
+
+.div.Ravi form p {
+    font-size: 0.8em;
+    text-align: center;
+    margin-top: 15px;
+}
+
+@media (max-width: 600px) {
+    .div.Ravi form button {
+        width: 100%; 
+        margin-bottom: 10px; 
+    }
+    .div.Ravi form button.cancelbtn{
+        margin-right: 0;
+    }
+}

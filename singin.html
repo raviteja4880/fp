@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="C:/Users/ravit/Downloads\logo.png">
+    <link rel="stylesheet" href="signin_styles.css">
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="Ravi">
+        <center>
+        <section class="top">
+            <h2>Log in</h2>
+        </section>
+        </center>
+        <br><hr><br>
+        <form id="signupForm" action="file:///C:/Users/ravit/OneDrive/%E6%96%87%E6%A1%A3/Desktop/fp/mainindex.html" method="POST">
+            <label> <b>Full Name:</b> 
+                <input type="text" placeholder="📛Enter Name" name="name" id="name" required>
+            </label>
+            <br>
+            <label for="password"> <b>Password:</b> 
+                <input type="password" placeholder="🔑Enter password" name="password" id="pswd" required>
+            </label>
+            <br>
+            <label> <b>Email:</b> 
+                <input type="email" placeholder="📩Enter email" name="email" id="mail" required>
+            </label>
+            <br>
+            <p>By creating an account you agree to our 
+                <a href="https://www.termsfeed.com/live/0b276a87-37b8-4921-896c-acc641177a4f" style="color:dodgerblue">
+                    Terms & Privacy.
+                </a>
+            </p>
+            <button type="button" class="cancelbtn" onclick="clearForm()">Cancel</button>
+            <button type="submit" class="signupbtn">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+        function clearForm() {
+            document.getElementById("signupForm").reset();
+        }
+    </script>
+</body>
+</html>
